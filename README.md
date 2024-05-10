@@ -5,3 +5,4 @@ Working on making a dice rolling game
     Pips are all added. Need to figure out how to show/hide each pip as needed. That will be controlled through javascript somehow and will reflect the number rolled. If the number is a 4 I need to "hide" the pips in grid locations c, d, and e. 
 
 5/10.. Attempted to line items up to bottom of the page. Trying to figure out how to target individual pip on individual dice so I can adjust which ones are showing. Added id's to each die to target them individually, now to find each pip. Figured out how to make individual pips transparent. Need to class each necessary pip for each number and set them up to toggle.
+    Id'd all pips.
