@@ -56,3 +56,6 @@ body {
 #firstDie {
     background-color: green;
 }
+.dieOneMakeSix {
+    opacity: 0;
+}
