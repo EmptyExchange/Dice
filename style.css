@@ -38,20 +38,23 @@ body {
     
 }
 .pip:nth-child(1) {
-    grid-area: g;
+    grid-area: a;
 }
 .pip:nth-child(2) {
-    grid-area: f;
+    grid-area: b;
 }
 .pip:nth-child(3) {
-    grid-area: e;
+    grid-area: c;
 }
 .pip:nth-child(4) {
     grid-area: d;
 }
 .pip:nth-child(5) {
-    grid-area: c;
+    grid-area: e;
 }
 .pip:nth-child(6){
-    grid-area: b;
+    grid-area: f;
+}
+.pip:nth-child(7){
+    grid-area: g;
 }
