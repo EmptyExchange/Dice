@@ -22,4 +22,4 @@ console.log(fifthDie);
 console.log(sixthDie);
 }
 
-rollDice();
+
