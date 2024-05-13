@@ -59,12 +59,13 @@ function randomizeDice(diceContainer, numberOfDice) {
         const dice = createDice(random);
         
         diceContainer.appendChild(dice);
-       
+       console.log(scoreDice(random))
+    
     }
    
     
 }
-
+let score = 0;
 const diceQuantity = 6;
 const diceContainer = document.querySelector(".diceContainer");
 const btnRollDice = document.querySelector(".rollDice");
@@ -79,7 +80,7 @@ btnRollDice.addEventListener("click", () => {
 });
 
 function scoreDice(random) {
-    let score = 0;
+   
     if (random === 1) {
         score += 100;
     }
