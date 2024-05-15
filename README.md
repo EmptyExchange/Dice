@@ -18,3 +18,16 @@ Working on making a dice rolling game
 5/14.. Another idea. Need to be able to select certain dice and reroll the rest. Need to be able to score the kept dice and accumulate the score. Or maybe limit to 3 rolls total and take score at the end.     
 
 5/15.. Removed score dice function. Will add back.
+    Using this to think through what I need. Pushing to array doesn't work with the animation.
+    Press roll and all 6 dice change as well as the button that says roll changes to "second roll". An array holding six 0's. Dice are able to be clicked and highlighted to keep. Second roll button is pressed.
+    The arrray holding the 0's is modified. The held quantities are pushed into the array and 0's are popped off. The number of 0's in the array changes the quantity of dice. The remaining dice that were not held are then rolled. The array is reset to 0's and player gets the option of which dice to hold again. including dice previously held. Button changes to "final roll". Same process of rolling as above.
+    On final roll button changes to "collect score" No option to highlight this time. array has been reset to 0's again, but this time all 6 are pushed into the array and all 0's are popped off. 
+    Then scoring begins. 
+    1 = 100
+    5 = 50
+    3 of a kind = # * 100
+    4 of a kind = # * 100 * 2
+    5 of a kind = # * 100 * 3
+    6 of a kind = # * 100 * 5 (extra bonus for getting all 6)
+    1 to 6 = 1500
+I believe this will work. Now I just need time to work it out in the code.

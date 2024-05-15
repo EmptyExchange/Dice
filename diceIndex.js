@@ -59,10 +59,11 @@ function randomizeDice(diceContainer, numberOfDice) {
         const dice = createDice(random);
         
         diceContainer.appendChild(dice);
-       
+       score.push(random);
+      
     
     }
-   
+    console.log(score)
     
 }
 let score = [];
