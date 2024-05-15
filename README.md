@@ -13,3 +13,8 @@ Working on making a dice rolling game
 5/13.. Was having an issue with the roll button adding 6 dice every time. Figured out that I wrote innerHtml. I needed innerHTML. Dice rolling is now working. Now I am on my own with trying to figure out how to set up scoring. The tutorial also had a nice rolling animation but I think because the "animation" is actually calling the randomzeDice function over and over it would make the scoring impossible. Unless I can figure out a what to only score after the roll has completed. Maybe set the scoring function to a delay and let it run after the animation. I need to figure out the scoring first.
     Got basic scoring of 5's and 1's to work. It adds them to "score" need to figure out how to get it to catch 3 of a kind and other more complicated scoring. 
     As expected using the cool rolling animation causes the score to go batty. Need to find another way to collect score or animate.
+    Possible solution to scoring issue. instead of having a score variable that updates as the random numbers are created. Push the random numbers into an array and loop the array to create the score. 
+
+5/14.. Another idea. Need to be able to select certain dice and reroll the rest. Need to be able to score the kept dice and accumulate the score. Or maybe limit to 3 rolls total and take score at the end.     
+
+5/15.. Removed score dice function. Will add back.
