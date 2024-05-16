@@ -38,6 +38,7 @@ function createDice(number) {
     const dice = document.createElement("div");
 
     dice.classList.add("dice");
+    
 
     for (const pipPosition of pipPositionMatrix[number]) {
         const pip = document.createElement("div");
@@ -59,11 +60,11 @@ function randomizeDice(diceContainer, numberOfDice) {
         const dice = createDice(random);
         
         diceContainer.appendChild(dice);
-       score.push(random);
+        dice.setAttribute("id", "die" + i)
       
     
     }
-    console.log(score)
+    
     
 }
 let score = [];
