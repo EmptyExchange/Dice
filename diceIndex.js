@@ -61,16 +61,20 @@ function randomizeDice(diceContainer, numberOfDice) {
         
         diceContainer.appendChild(dice);
         dice.setAttribute("id", "die" + i)
-      
+        dice.addEventListener("click", () => {
+            dice.classList.toggle("dice");
+            dice.classList.toggle("savedDice")
+        })
     
     }
     
     
 }
 let score = [];
-const diceQuantity = 6;
+let diceQuantity = 6;
 const diceContainer = document.querySelector(".diceContainer");
 const btnRollDice = document.querySelector(".rollDice");
+
 
 randomizeDice(diceContainer, diceQuantity);
 
@@ -80,3 +84,5 @@ btnRollDice.addEventListener("click", () => {
    }, 50);
    setTimeout(() => clearInterval(interval), 1000);
 });
+
+

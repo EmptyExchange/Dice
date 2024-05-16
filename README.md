@@ -34,3 +34,4 @@ I believe this will work. Now I just need time to work it out in the code.
 
 5/16.. Do I need to have static dice divs that each have an id of number postion so I can keep them separated. Right now the javascript is creating the div when it gets rolled. I need more time so I can work it out.
     Figured out how to set each die with an indiviual id. Now I can target each die. Will also work in the future when dice are added or subtracted during gameplay. Next step is to highlight dice.
+    Figured out how to toggle class for each die and created a savedDice css class to make it look highlighted
