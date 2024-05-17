@@ -79,10 +79,23 @@ const btnRollDice = document.querySelector(".rollDice");
 randomizeDice(diceContainer, diceQuantity);
 
 btnRollDice.addEventListener("click", () => {
+    removeButton();
+    secondRollButton();
    const interval = setInterval(() => {
         randomizeDice(diceContainer, diceQuantity);
    }, 50);
    setTimeout(() => clearInterval(interval), 1000);
 });
 
+function removeButton() {
+    const button = document.getElementById("beginRoll");
+    button.parentNode.removeChild(button);
 
+}
+
+function secondRollButton() {
+    const button = document.createElement("button");
+    button.textContent = "Second Roll";
+    button.classList.add("rollDice");
+    document.body.appendChild(button);
+}

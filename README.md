@@ -29,9 +29,11 @@ Working on making a dice rolling game
     4 of a kind = # * 100 * 2
     5 of a kind = # * 100 * 3
     6 of a kind = # * 100 * 5 (extra bonus for getting all 6)
-    1 to 6 = 1500
+    1 to 6 = 500
 I believe this will work. Now I just need time to work it out in the code.
 
 5/16.. Do I need to have static dice divs that each have an id of number postion so I can keep them separated. Right now the javascript is creating the div when it gets rolled. I need more time so I can work it out.
     Figured out how to set each die with an indiviual id. Now I can target each die. Will also work in the future when dice are added or subtracted during gameplay. Next step is to highlight dice.
     Figured out how to toggle class for each die and created a savedDice css class to make it look highlighted
+
+5/17.. Not much time today, but was able to trade out original roll button with second roll button. Still need to put the roll function on the second roll button, as well as figure out how to handle what to do after the third roll and how to handle the scoring. Automatically take the largest score possible or make the player keep the right dice so they have to think about and can possible strategize about what to do with their score. I might have more time next week or possibly will get this on my chromebook at home. 
