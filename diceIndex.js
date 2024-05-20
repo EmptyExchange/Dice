@@ -73,29 +73,65 @@ function randomizeDice(diceContainer, numberOfDice) {
 let score = [];
 let diceQuantity = 6;
 const diceContainer = document.querySelector(".diceContainer");
-const btnRollDice = document.querySelector(".rollDice");
+const btnRollDice = document.querySelector("#beginRoll");
+
 
 
 randomizeDice(diceContainer, diceQuantity);
 
 btnRollDice.addEventListener("click", () => {
-    removeButton();
-    secondRollButton();
+    removeButton("beginRoll");
+    createSecondRollButton();
    const interval = setInterval(() => {
         randomizeDice(diceContainer, diceQuantity);
    }, 50);
    setTimeout(() => clearInterval(interval), 1000);
+
+     secondRoll.addEventListener("click", () => {
+        removeButton("secondRoll");
+        createFinalRollButton();
+            const interval = setInterval(() => {
+            randomizeDice(diceContainer, diceQuantity);
+            }, 50);
+            setTimeout(() => clearInterval(interval), 1000);
+
+            finalRoll.addEventListener("click", () => {
+                removeButton("finalRoll");
+                const interval = setInterval(() => {
+                    randomizeDice(diceContainer, diceQuantity);
+                    }, 50);
+                    setTimeout(() => clearInterval(interval), 1000);
+        
+                const button = document.createElement("button");
+                button.textContent = ("Roll Dice");
+                button.classList.add("rollDice");
+                button.setAttribute("id", "beginRoll");
+                document.body.appendChild(button);
+            });
+});
 });
 
-function removeButton() {
-    const button = document.getElementById("beginRoll");
+
+
+function removeButton(buttonId) {
+    const button = document.getElementById(buttonId);
     button.parentNode.removeChild(button);
 
 }
 
-function secondRollButton() {
+function createSecondRollButton() {
     const button = document.createElement("button");
     button.textContent = "Second Roll";
     button.classList.add("rollDice");
+    button.setAttribute("id", "secondRoll");
     document.body.appendChild(button);
 }
+
+function createFinalRollButton() {
+    const button = document.createElement("button");
+    button.textContent = "Final Roll";
+    button.classList.add("rollDice");
+    button.setAttribute("id", "finalRoll");
+    document.body.appendChild(button);
+}
+

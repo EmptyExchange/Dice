@@ -37,3 +37,5 @@ I believe this will work. Now I just need time to work it out in the code.
     Figured out how to toggle class for each die and created a savedDice css class to make it look highlighted
 
 5/17.. Not much time today, but was able to trade out original roll button with second roll button. Still need to put the roll function on the second roll button, as well as figure out how to handle what to do after the third roll and how to handle the scoring. Automatically take the largest score possible or make the player keep the right dice so they have to think about and can possible strategize about what to do with their score. I might have more time next week or possibly will get this on my chromebook at home. 
+
+5/18.. Was having trouble figuring out how to add an event listener to an object that doesn't exist. What I did was put the function that creates the second roll button inside the original roll function. I will need to do the same with the final roll. That way they look for the event listener AFTER the object is created. I got the functoin to work for all the dice rolls. It looks horrible and is hard to read. I will try to clean it up when I work on it again.
