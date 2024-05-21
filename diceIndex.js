@@ -60,7 +60,7 @@ function randomizeDice(diceContainer, numberOfDice) {
         const dice = createDice(random);
         
         diceContainer.appendChild(dice);
-        dice.setAttribute("id", "die" + i)
+        dice.setAttribute("id", "die" + (i + 1))
         dice.addEventListener("click", () => {
             dice.classList.toggle("dice");
             dice.classList.toggle("savedDice")
@@ -81,34 +81,38 @@ randomizeDice(diceContainer, diceQuantity);
 
 btnRollDice.addEventListener("click", () => {
     removeButton("beginRoll");
-    createSecondRollButton();
-   const interval = setInterval(() => {
-        randomizeDice(diceContainer, diceQuantity);
-   }, 50);
-   setTimeout(() => clearInterval(interval), 1000);
+    //create secondRoll button
+    const button = document.createElement("button");
+    button.textContent = "Second Roll";
+    button.classList.add("rollDice");
+    button.setAttribute("id", "secondRoll");
+    document.body.appendChild(button);
 
-     secondRoll.addEventListener("click", () => {
-        removeButton("secondRoll");
-        createFinalRollButton();
-            const interval = setInterval(() => {
-            randomizeDice(diceContainer, diceQuantity);
-            }, 50);
-            setTimeout(() => clearInterval(interval), 1000);
+    randomRoll();
 
-            finalRoll.addEventListener("click", () => {
-                removeButton("finalRoll");
-                const interval = setInterval(() => {
-                    randomizeDice(diceContainer, diceQuantity);
-                    }, 50);
-                    setTimeout(() => clearInterval(interval), 1000);
-        
-                const button = document.createElement("button");
-                button.textContent = ("Roll Dice");
-                button.classList.add("rollDice");
-                button.setAttribute("id", "beginRoll");
-                document.body.appendChild(button);
-            });
-});
+        secondRoll.addEventListener("click", () => {
+            removeButton("secondRoll");
+            //Create finalRoll button
+            const button = document.createElement("button");
+            button.textContent = "Final Roll";
+            button.classList.add("rollDice");
+            button.setAttribute("id", "finalRoll");
+            document.body.appendChild(button);
+            
+            randomRoll();
+
+                finalRoll.addEventListener("click", () => {
+                    removeButton("finalRoll");
+                    //Create take score button to finalize round
+                    const button = document.createElement("button");
+                    button.textContent = ("Take Score");
+                    button.classList.add("rollDice");
+                    button.setAttribute("id", "takeScore");
+                    document.body.appendChild(button);
+
+                    randomRoll();
+                });
+        });
 });
 
 
@@ -117,21 +121,13 @@ function removeButton(buttonId) {
     const button = document.getElementById(buttonId);
     button.parentNode.removeChild(button);
 
-}
+};
 
-function createSecondRollButton() {
-    const button = document.createElement("button");
-    button.textContent = "Second Roll";
-    button.classList.add("rollDice");
-    button.setAttribute("id", "secondRoll");
-    document.body.appendChild(button);
-}
+function randomRoll() {
+    const interval = setInterval(() => {
+        randomizeDice(diceContainer, diceQuantity);
+   }, 50);
+   setTimeout(() => clearInterval(interval), 1000);
+};
 
-function createFinalRollButton() {
-    const button = document.createElement("button");
-    button.textContent = "Final Roll";
-    button.classList.add("rollDice");
-    button.setAttribute("id", "finalRoll");
-    document.body.appendChild(button);
-}
 
