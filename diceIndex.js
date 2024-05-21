@@ -80,37 +80,27 @@ const btnRollDice = document.querySelector("#beginRoll");
 randomizeDice(diceContainer, diceQuantity);
 
 btnRollDice.addEventListener("click", () => {
-    removeButton("beginRoll");
-    //create secondRoll button
-    const button = document.createElement("button");
-    button.textContent = "Second Roll";
-    button.classList.add("rollDice");
-    button.setAttribute("id", "secondRoll");
-    document.body.appendChild(button);
-
-    randomRoll();
+     btnRollDice.setAttribute("id", "secondRoll");
+     randomRoll();
 
         secondRoll.addEventListener("click", () => {
-            removeButton("secondRoll");
-            //Create finalRoll button
-            const button = document.createElement("button");
-            button.textContent = "Final Roll";
-            button.classList.add("rollDice");
-            button.setAttribute("id", "finalRoll");
-            document.body.appendChild(button);
-            
+            secondRoll.setAttribute("id", "finalRoll");
             randomRoll();
 
                 finalRoll.addEventListener("click", () => {
                     removeButton("finalRoll");
-                    //Create take score button to finalize round
                     const button = document.createElement("button");
-                    button.textContent = ("Take Score");
+                    button.textContent = ("Collect Points");
                     button.classList.add("rollDice");
-                    button.setAttribute("id", "takeScore");
+                    button.setAttribute("id", "collectScore");
                     document.body.appendChild(button);
-
                     randomRoll();
+                        
+                        collectScore.addEventListener("click", () => {
+                            alert("final roll complete this is just a test")
+                        })
+
+                    
                 });
         });
 });
@@ -122,6 +112,8 @@ function removeButton(buttonId) {
     button.parentNode.removeChild(button);
 
 };
+
+
 
 function randomRoll() {
     const interval = setInterval(() => {
