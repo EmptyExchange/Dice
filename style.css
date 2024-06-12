@@ -44,3 +44,21 @@
     margin-top: 10px;
 }
 
+#diceFace1 {
+    background-image: url('C:/Users/mike/Desktop/Projects/Dice/diceFacePics/side1.png') ;
+}
+#diceFace2 {
+    background-image: url('C:/Users/mike/Desktop/Projects/Dice/diceFacePics/side2.png') ;
+}
+#diceFace3 {
+    background-image: url('C:/Users/mike/Desktop/Projects/Dice/diceFacePics/side3.png') ;
+}
+#diceFace4 {
+    background-image: url('C:/Users/mike/Desktop/Projects/Dice/diceFacePics/side4.png') ;
+}
+#diceFace5 {
+    background-image: url('C:/Users/mike/Desktop/Projects/Dice/diceFacePics/side5.png') ;
+}
+#diceFace6 {
+    background-image: url('C:/Users/mike/Desktop/Projects/Dice/diceFacePics/side6.png') ;
+}

@@ -45,3 +45,6 @@ I believe this will work. Now I just need time to work it out in the code.
 
 6/11.. Finally a chance to look at it again. Unfortunately I think I realized I need to basically start over. Instead of creating the dice I need to create a sprite for each dice face and assign the sprite or picture to the page after the random number is generated. The rolling animation rolls through tons of numbers and make it to where I can't put it in an array so I can't track it. Will update again when I start to make new progress
     created some dice faces. added them to the file. A little frustrated with basically starting over but I do think it will be better. More updates in the future.
+
+6/12.. Restarted. Commented out the original code instead of deleting it so I can use it if necessary. Starting slow but getting it pieced together. 
+    Got the Divs set and the original number for each dice set. Not too happy with the way it looks right now but thats ok. I need to figure out function then in the future I will work the visuals better. 
