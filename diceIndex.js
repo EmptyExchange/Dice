@@ -127,9 +127,11 @@ function rollDice() {
         for(let i = numberOfDice.length; i < 6; i++) {
             const random = Math.floor((Math.random() * 6) + 1);
             numberOfDice.push(random);
-        }
+        }}
     
-}
+const btnRollDice = document.querySelector(".rollDice")
+btnRollDice.addEventListener("click", () => {
+    rollDice();
+    console.log(numberOfDice)
+});
 
-rollDice();
-console.log(numberOfDice)
