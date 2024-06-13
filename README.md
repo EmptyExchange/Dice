@@ -48,3 +48,5 @@ I believe this will work. Now I just need time to work it out in the code.
 
 6/12.. Restarted. Commented out the original code instead of deleting it so I can use it if necessary. Starting slow but getting it pieced together. 
     Got the Divs set and the original number for each dice set. Not too happy with the way it looks right now but thats ok. I need to figure out function then in the future I will work the visuals better. 
+
+6/13.. Feel like I am making some good progress on the functionality. Still ugly. Haven't assigned dice face to values, but I have figured out how to keep the dice values and put them in a 6 piece array in the order they were selected. Need to figure out how to make the numberOfDice array to only have as many spots as there are 0 values in the kept dice array. 

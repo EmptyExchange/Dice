@@ -122,16 +122,63 @@
 //    setTimeout(() => clearInterval(interval), 1000);
 // };
 let numberOfDice = [];
+let keptDice = [0, 0, 0, 0, 0, 0];
 function rollDice() {
-    
+    numberOfDice = [];
         for(let i = numberOfDice.length; i < 6; i++) {
+            
             const random = Math.floor((Math.random() * 6) + 1);
             numberOfDice.push(random);
-        }}
+        }
+    
+    }
     
 const btnRollDice = document.querySelector(".rollDice")
 btnRollDice.addEventListener("click", () => {
     rollDice();
     console.log(numberOfDice)
+    console.log(keptDice)
 });
 
+const die1 = document.querySelector("#diceFace1")
+const die2 = document.querySelector("#diceFace2")
+const die3 = document.querySelector("#diceFace3")
+const die4 = document.querySelector("#diceFace4")
+const die5 = document.querySelector("#diceFace5")
+const die6 = document.querySelector("#diceFace6")
+
+die1.addEventListener("click", () => {
+    die1.classList.toggle("dice");
+    die1.classList.toggle("savedDice");
+    keptDice.splice(0, 1, numberOfDice[0]);
+    });
+
+die2.addEventListener("click", () => {
+    die2.classList.toggle("dice");
+    die2.classList.toggle("savedDice");
+    keptDice.splice(1, 1, numberOfDice[1]);
+    });
+
+die3.addEventListener("click", () => {
+    die3.classList.toggle("dice");
+    die3.classList.toggle("savedDice");
+    keptDice.splice(2, 1, numberOfDice[2]);
+    });
+
+die4.addEventListener("click", () => {
+    die4.classList.toggle("dice");
+    die4.classList.toggle("savedDice");
+    keptDice.splice(3, 1, numberOfDice[3]);
+    });   
+
+die5.addEventListener("click", () => {
+    die5.classList.toggle("dice");
+    die5.classList.toggle("savedDice");
+    keptDice.splice(4, 1, numberOfDice[4]);
+    });
+
+die6.addEventListener("click", () => {
+    die6.classList.toggle("dice");
+    die6.classList.toggle("savedDice");
+    keptDice.splice(5, 1, numberOfDice[5]);
+    });
