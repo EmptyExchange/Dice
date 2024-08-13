@@ -122,6 +122,14 @@
 //    setTimeout(() => clearInterval(interval), 1000);
 // };
 let numberOfDice = [];
+
+function checkKeptDice(keptDice) {
+    for (i = 0; i < keptDice.length; i++) {
+        
+    }
+}
+
+
 let keptDice = [0, 0, 0, 0, 0, 0];
 function rollDice() {
     numberOfDice = [];
